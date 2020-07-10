@@ -1,0 +1,26 @@
+{
+  "name": "webpack-monorepo",
+  "version": "1.0.0",
+  "description": "Implementing a monorepository using Webpack",
+  "main": "index.js",
+  "scripts": {
+    "serve:dev:portal": "webpack-dev-server",
+    "serve:dev:admin": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "build:dev:portal": "npm run clean && webpack --mode development",
+    "build:prod:portal": "npm run clean && BABEL_ENV=production webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ielkanyuk/webpack-monorepo.git"
+  },
+  "author": "Igor Elkanyuk",
+  "license": "ISC",
+  "homepage": "https://github.com/ielkanyuk/webpack-monorepo#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
